@@ -8,11 +8,13 @@
 </head>
 <body>
     <header>
-        <h1>R&R</h1> <!-- Bedrijfsnaam bovenaan toegevoegd -->
+        <img src="logo.jpg" alt="Bedrijfslogo" width="150"> <!-- Logo toegevoegd -->
+        <h1>R&R</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#appartementen">Appartementen</a>
             <a href="#contact">Contact</a>
+            <a href="#enquete">Enquête</a> <!-- Nieuwe link naar de enquête -->
         </nav>
     </header>
 
@@ -52,6 +54,65 @@
             <textarea id="bericht" name="bericht" rows="5" required></textarea>
             
             <button type="submit">Verstuur</button>
+        </form>
+    </section>
+
+    <!-- Nieuwe enquête sectie -->
+    <section id="enquete">
+        <h2>Vind uw ideale appartement of hotelkamer</h2>
+        <p>Beantwoord een paar korte vragen zodat we u beter kunnen helpen bij het vinden van de perfecte ruimte.</p>
+        
+        <form action="submit_survey.php" method="POST">
+            <label for="locatie">Welke locatie heeft uw voorkeur?</label>
+            <select id="locatie" name="locatie" required>
+                <option value="stadscentrum">Stadscentrum</option>
+                <option value="buitenwijk">Buitenwijk</option>
+                <option value="natuur">Natuurgebied</option>
+                <option value="strand">Dicht bij het strand</option>
+            </select>
+
+            <label for="soort">Wat zoekt u?</label>
+            <select id="soort" name="soort" required>
+                <option value="appartement">Appartement</option>
+                <option value="hotelkamer">Hotelkamer</option>
+                <option value="studio">Studio</option>
+                <option value="penthouse">Penthouse</option>
+            </select>
+
+            <label for="budget">Wat is uw budget per nacht/maand?</label>
+            <select id="budget" name="budget" required>
+                <option value="500">Onder €500</option>
+                <option value="500-1000">€500 - €1000</option>
+                <option value="1000-1500">€1000 - €1500</option>
+                <option value="1500">Boven €1500</option>
+            </select>
+
+            <label for="grootte">Gewenste grootte van de ruimte</label>
+            <select id="grootte" name="grootte" required>
+                <option value="klein">Klein (1-2 personen)</option>
+                <option value="gemiddeld">Gemiddeld (2-4 personen)</option>
+                <option value="groot">Groot (4+ personen)</option>
+            </select>
+
+            <label for="faciliteiten">Welke faciliteiten zijn belangrijk voor u?</label>
+            <div>
+                <input type="checkbox" id="wifi" name="faciliteiten[]" value="wifi">
+                <label for="wifi">Gratis Wi-Fi</label><br>
+
+                <input type="checkbox" id="parking" name="faciliteiten[]" value="parking">
+                <label for="parking">Parkeerplaats</label><br>
+
+                <input type="checkbox" id="zwembad" name="faciliteiten[]" value="zwembad">
+                <label for="zwembad">Zwembad</label><br>
+
+                <input type="checkbox" id="gym" name="faciliteiten[]" value="gym">
+                <label for="gym">Fitnessruimte</label>
+            </div>
+
+            <label for="specifieke_wensen">Specifieke wensen of opmerkingen</label>
+            <textarea id="specifieke_wensen" name="specifieke_wensen" rows="4"></textarea>
+
+            <button type="submit">Verstuur Enquête</button>
         </form>
     </section>
 
