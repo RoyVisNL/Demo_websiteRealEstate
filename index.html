@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vastgoed Bedrijf</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welkom bij Vastgoed Bedrijf</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#appartementen">Appartementen</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Uw nieuwe thuis wacht op u</h2>
+        <p>Bekijk onze prachtige appartementen en vind uw ideale woning.</p>
+    </section>
+
+    <section id="appartementen">
+        <h2>Appartementen</h2>
+        <div class="appartementen-lijst">
+            <div class="appartement">
+                <img src="appartement1.jpg" alt="Appartement 1">
+                <h3>Appartement in Amsterdam</h3>
+                <p>Prijs: € 1.200 per maand</p>
+                <p>Beschrijving: Een prachtig 2-kamer appartement in het hart van Amsterdam.</p>
+            </div>
+            <div class="appartement">
+                <img src="appartement2.jpg" alt="Appartement 2">
+                <h3>Appartement in Utrecht</h3>
+                <p>Prijs: € 950 per maand</p>
+                <p>Beschrijving: Een gezellig appartement nabij het stadscentrum.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contacteer ons</h2>
+        <form action="submit_contact_form.php" method="POST">
+            <label for="naam">Naam:</label>
+            <input type="text" id="naam" name="naam" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="bericht">Bericht:</label>
+            <textarea id="bericht" name="bericht" rows="5" required></textarea>
+            
+            <button type="submit">Verstuur</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Vastgoed Bedrijf. Alle rechten voorbehouden.</p>
+    </footer>
+</body>
+</html>
