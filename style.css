@@ -5,6 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     text-align: center; /* Zorgt dat tekst standaard gecentreerd is */
+    background-color: #f4f4f4;
 }
 
 header {
@@ -28,7 +29,7 @@ header nav a:hover {
 /* Home sectie */
 #home {
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 
 /* Appartementen sectie */
@@ -41,7 +42,7 @@ header nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Ruimte tussen de kaarten */
+    gap: 20px;
 }
 
 #appartementen .appartement {
@@ -49,7 +50,7 @@ header nav a:hover {
     padding: 15px;
     border-radius: 8px;
     background-color: white;
-    width: 300px; /* Zorg voor consistente breedte */
+    width: 300px; /* Consistente breedte */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -64,6 +65,67 @@ header nav a:hover {
     height: auto;
     border-radius: 5px;
     margin-bottom: 10px;
+}
+
+/* Galerij in ap1.html */
+.foto-galerij {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.foto-galerij img {
+    max-width: 150px; /* Kleine previews */
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.foto-galerij img:hover {
+    transform: scale(1.1); /* Zoom effect op hover */
+}
+
+/* Lightbox overlay */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+/* Sluitknop voor de lightbox */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    z-index: 1001;
+}
+
+.lightbox-close:hover {
+    color: #ddd;
 }
 
 /* Formulieren en invoervelden */
@@ -101,5 +163,4 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
-    position: relative;
 }
