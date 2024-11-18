@@ -8,13 +8,13 @@
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="Bedrijfslogo" width="150"> <!-- Logo toegevoegd -->
-        <h1>R&R</h1>
+        <img src="logo.jpg" alt="Bedrijfslogo" width="150">
+        <h1>R&R Vastgoed Bedrijf</h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#appartementen">Appartementen</a>
             <a href="#contact">Contact</a>
-            <a href="#enquete">Enquête</a> <!-- Nieuwe link naar de enquête -->
+            <a href="#enquete">Enquête</a>
         </nav>
     </header>
 
@@ -26,17 +26,24 @@
     <section id="appartementen">
         <h2>Appartementen</h2>
         <div class="appartementen-lijst">
+            <!-- Appartement 1 -->
             <div class="appartement">
-                <img src="appartement1.jpg" alt="Appartement 1">
-                <h3>Appartement in Amsterdam</h3>
-                <p>Prijs: € 1.200 per maand</p>
-                <p>Beschrijving: Een prachtig 2-kamer appartement in het hart van Amsterdam.</p>
+                <a href="ap1.html">
+                    <img src="Ap_1/20240213-DSCF0636-HDR.jpg" alt="Appartement in Amsterdam">
+                    <h3>Appartement in Amsterdam</h3>
+                    <p>Prijs: € 1.200 per maand</p>
+                    <p>Beschrijving: Een prachtig 2-kamer appartement in het hart van Amsterdam.</p>
+                </a>
             </div>
+
+            <!-- Appartement 2 -->
             <div class="appartement">
-                <img src="appartement2.jpg" alt="Appartement 2">
-                <h3>Appartement in Utrecht</h3>
-                <p>Prijs: € 950 per maand</p>
-                <p>Beschrijving: Een gezellig appartement nabij het stadscentrum.</p>
+                <a href="ap2.html">
+                    <img src="Ap_2/20240213-DSCF0825-HDR.jpg" alt="Appartement in Utrecht">
+                    <h3>Appartement in Utrecht</h3>
+                    <p>Prijs: € 950 per maand</p>
+                    <p>Beschrijving: Een gezellig appartement nabij het stadscentrum.</p>
+                </a>
             </div>
         </div>
     </section>
@@ -57,11 +64,9 @@
         </form>
     </section>
 
-    <!-- Nieuwe enquête sectie -->
     <section id="enquete">
         <h2>Vind uw ideale appartement of hotelkamer</h2>
         <p>Beantwoord een paar korte vragen zodat we u beter kunnen helpen bij het vinden van de perfecte ruimte.</p>
-        
         <form action="submit_survey.php" method="POST">
             <label for="locatie">Welke locatie heeft uw voorkeur?</label>
             <select id="locatie" name="locatie" required>
