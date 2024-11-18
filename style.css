@@ -1,14 +1,16 @@
+/* Algemene instellingen */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    text-align: center; /* Zorgt dat tekst standaard gecentreerd is */
 }
 
 header {
     background-color: #333;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -16,44 +18,67 @@ header nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 header nav a:hover {
     text-decoration: underline;
 }
 
-section {
+/* Home sectie */
+#home {
     padding: 20px;
-    margin: 20px 0;
+    background-color: #f4f4f4;
+}
+
+/* Appartementen sectie */
+#appartementen {
+    background-color: #f9f9f9;
+    padding: 20px;
 }
 
 #appartementen .appartementen-lijst {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Ruimte tussen de kaarten */
 }
 
 #appartementen .appartement {
     border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-    width: calc(50% - 20px);
+    padding: 15px;
+    border-radius: 8px;
+    background-color: white;
+    width: 300px; /* Zorg voor consistente breedte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#appartementen .appartement:hover {
+    transform: scale(1.05); /* Zoom-effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 #appartementen .appartement img {
-    max-width: 100%;
+    max-width: 100%; /* Zorgt dat afbeeldingen niet breder zijn dan de kaart */
+    height: auto;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
+/* Formulieren en invoervelden */
 form {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
-form input, form textarea, form button {
+form input, form select, form textarea, form button {
+    width: 80%;
+    max-width: 400px;
     padding: 10px;
-    font-size: 1rem;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
@@ -62,18 +87,19 @@ form button {
     background-color: #333;
     color: white;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 form button:hover {
     background-color: #555;
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
+    position: relative;
 }
